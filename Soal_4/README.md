@@ -29,3 +29,16 @@ module.exports = {
 ```
 
 fixnya mengubah `module.export` menjadi `module.exports`
+
+####/src/services/userInfoService.js
+
+```
+// default
+module.export = getUserInfo
+// fix
+module.exports = {
+  getUserInfo: getUserInfo
+}
+```
+
+fixnya mengubah `module.export` menjadi `module.exports`

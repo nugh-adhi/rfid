@@ -11,9 +11,10 @@ function callback(req, res) {
   const options = { headers: { accept: "application/json" } };
   axios
     .post(`${config.oauthUrl}/access_token`, body, options)
-    .then((res) => resp.data["accessToken"])
+    .then((res) => res.data["accessToken"])
     .then((accessToken) => {
       const user = UserServices.getUserInfo(accessToken);
+      console.log(user)
       res.json({
         data: {
           login: user.login,
